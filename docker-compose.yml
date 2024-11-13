@@ -1,0 +1,7 @@
+version: '3.7'
+services:
+  renew-certificate:
+    image: ghcr.io/louisa-uno/renew-traefic-certs:latest
+    volumes:
+      - /path_to_traefik_certs_folder/certs:/certs
+    restart: unless-stopped
