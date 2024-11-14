@@ -2,7 +2,7 @@
 
 renew_cert() {
     local domain=$1
-    certbot certonly --dns-cloudflare --config-dir /certs -d "$domain" --dns-cloudflare-credentials cloudflare.ini -n --agree-tos --email email@example.com
+    certbot certonly --dns-cloudflare --config-dir /certs -d "$domain" --dns-cloudflare-credentials cloudflare.ini -n --agree-tos --email email@example.com --no-autorenew
 }
 
 main() {
