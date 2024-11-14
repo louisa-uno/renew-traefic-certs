@@ -9,4 +9,4 @@ RUN echo "1-15/5 */6 * * * certbot renew --config-dir /certs >> /var/log/cron.lo
 
 RUN touch /var/log/cron.log
 
-CMD /certs/renew.sh && crond -f -l 2
+CMD certbot renew --config-dir /certs && crond -f -l 2
